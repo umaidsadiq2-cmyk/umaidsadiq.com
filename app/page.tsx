@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CinemaHero } from "@/components/sections/cinema-hero";
 import { MyServices } from "@/components/sections/my-services";
+import { Testimonials } from "@/components/sections/testimonials";
 import { PortfolioPreview } from "@/components/sections/portfolio-preview";
 import { FinalCta } from "@/components/sections/final-cta";
 import { buildMetadata } from "@/lib/seo";
@@ -35,15 +36,17 @@ export const metadata: Metadata = {
  * Home page.
  *
  * 1–2  CinemaHero      Hero + "What I Do" over one continuous, held video scene
- * 3    MyServices      the six offerings as a scroll-driven horizontal carousel
- * 4    PortfolioPreview  "Selected work" (unchanged) — the nav's "Work" target
- * 5    FinalCta        "Let's work together" (unchanged)
+ * 3    MyServices      the seven offerings as a scroll-driven horizontal carousel
+ * 4    Testimonials    real client reviews, linked to the Facebook source
+ * 5    PortfolioPreview  "Selected work" (unchanged) — the nav's "Work" target
+ * 6    FinalCta        "Let's work together" (unchanged)
  */
 export default function HomePage() {
   return (
     <>
       <CinemaHero />
       <MyServices />
+      <Testimonials />
       <PortfolioPreview />
       <FinalCta />
     </>

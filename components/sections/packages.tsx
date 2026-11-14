@@ -5,7 +5,8 @@ import { showDrafts } from "@/lib/drafts";
 import { cn } from "@/lib/utils";
 
 /**
- * Monthly packages. While the prices are placeholders (`packagesDraft`), the
+ * Monthly packages, shown without prices (each is quoted after a call). While
+ * `packagesDraft` is true the inclusions are unconfirmed, so the
  * section renders only in local development and is left out of the live site.
  */
 export function Packages() {
@@ -24,12 +25,12 @@ export function Packages() {
           </Reveal>
           <Reveal delay={60} rise>
             <h2 id="packages-heading" className="display-lg mt-6">
-              Clear plans. No surprises.
+              Pick a starting point.
             </h2>
           </Reveal>
           {packagesDraft && (
             <p className="mx-auto mt-6 inline-block rounded-full bg-amber-100 px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-amber-800">
-              Draft · prices not set · not live
+              Draft · not live
             </p>
           )}
         </div>
@@ -55,13 +56,8 @@ export function Packages() {
                   {p.forWho}
                 </p>
 
-                <p className="mt-7 flex items-baseline gap-2">
-                  <span className="font-display text-[2.25rem] font-semibold leading-none tracking-tight">
-                    {p.price}
-                  </span>
-                  <span className={cn("text-sm", p.featured ? "text-white/60" : "text-muted")}>
-                    {p.period}
-                  </span>
+                <p className={cn("mt-7 font-mono text-xs uppercase tracking-[0.2em]", p.featured ? "text-[#6ee7b7]" : "text-emerald")}>
+                  Monthly · Custom quote
                 </p>
 
                 <ul className={cn("mt-7 space-y-3 border-t pt-7 text-sm", p.featured ? "border-white/15" : "border-line")}>
@@ -83,7 +79,7 @@ export function Packages() {
                     variant={p.featured ? undefined : "outline"}
                     className="w-full justify-center"
                   >
-                    Get started
+                    Get a quote
                   </MeetingButton>
                 </div>
               </div>

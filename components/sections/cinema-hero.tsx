@@ -9,11 +9,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const DISCIPLINES = [
   "Social Media Marketing",
   "Meta Ads",
+  "SEO",
   "Graphic Design",
   "Video Editing",
   "AI Ads",
   "Web & Software Development",
-  "SEO",
 ];
 
 /**

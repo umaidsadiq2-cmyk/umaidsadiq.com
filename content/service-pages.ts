@@ -268,7 +268,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
       text: "Create a meeting and share what you need designed. I will explain how a consistent visual system could work for your business.",
     },
     relatedSlugs: ["social-media-marketing", "video-editing", "ai-ads"],
-    order: 2,
+    order: 3,
   },
   {
     slug: "video-editing",
@@ -352,7 +352,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
       text: "Create a meeting and send over a sample of your footage. I will explain how it could be edited to hold attention and support your goals.",
     },
     relatedSlugs: ["graphic-design", "meta-ads", "ai-ads"],
-    order: 3,
+    order: 4,
   },
   {
     slug: "ai-ads",
@@ -437,7 +437,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
       text: "Create a meeting and I will show you what AI generated ad creative could look like for your business and your budget.",
     },
     relatedSlugs: ["meta-ads", "video-editing", "graphic-design"],
-    order: 4,
+    order: 5,
   },
   {
     slug: "ai-development",
@@ -523,7 +523,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
       text: "Create a meeting and describe what your business actually needs. I will explain what a custom website or business system could look like, and how AI assisted development could get it built faster.",
     },
     relatedSlugs: ["graphic-design", "social-media-marketing", "meta-ads"],
-    order: 5,
+    order: 6,
   },
   {
     slug: "seo",
@@ -608,7 +608,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
       text: "Create a meeting and I will look at how your website currently performs in search, and what it would take to bring you more customers from Google.",
     },
     relatedSlugs: ["ai-development", "social-media-marketing", "meta-ads"],
-    order: 6,
+    order: 2,
   },
 ]);
 

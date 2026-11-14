@@ -6,11 +6,25 @@ import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+export type ServiceGroup = "Grow" | "Create" | "Build";
+
+/**
+ * The three groups the seven services sit in, so they read as one system
+ * (get customers, make the content, build the systems) rather than a list.
+ */
+export const SERVICE_GROUPS: { name: ServiceGroup; line: string }[] = [
+  { name: "Grow", line: "Get seen and win customers" },
+  { name: "Create", line: "Content that stops the scroll" },
+  { name: "Build", line: "Websites and systems that scale" },
+];
+
 type ServiceCard = {
   name: string;
   blurb: string;
   /** Slug of the matching dedicated service page, e.g. /services/{slug}. */
   slug: string;
+  /** Which of the three groups the service belongs to; cards run in group order. */
+  group: ServiceGroup;
   /**
    * Card artwork, from /public. Optional: a card without one falls back to the
    * original emerald numeral treatment, so the section always looks finished.
@@ -19,11 +33,12 @@ type ServiceCard = {
   image?: string;
 };
 
-/** The seven offerings, in presentation order. */
+/** The seven offerings, in presentation order: Grow, then Create, then Build. */
 const CARDS: ServiceCard[] = [
   {
     name: "Social Media Marketing",
     slug: "social-media-marketing",
+    group: "Grow",
     blurb:
       "Organic growth and community management that turn followers into a pipeline of paying customers.",
     image: "/images/services/social-media-marketing.webp",
@@ -31,13 +46,23 @@ const CARDS: ServiceCard[] = [
   {
     name: "Meta Ads",
     slug: "meta-ads",
+    group: "Grow",
     blurb:
       "Facebook and Instagram campaigns engineered for reach, ROAS, and genuinely qualified leads.",
     image: "/images/services/meta-ads.webp",
   },
   {
+    name: "SEO",
+    slug: "seo",
+    group: "Grow",
+    blurb:
+      "Technical fixes, local SEO, and pages built around real searches, so customers find you on Google.",
+    image: "/images/services/seo.webp",
+  },
+  {
     name: "Graphic Design",
     slug: "graphic-design",
+    group: "Create",
     blurb:
       "Posts, carousels, logos, and print built to one brand standard, so you look established from the first glance.",
     image: "/images/services/graphic-design.webp",
@@ -45,6 +70,7 @@ const CARDS: ServiceCard[] = [
   {
     name: "Video Editing",
     slug: "video-editing",
+    group: "Create",
     blurb:
       "Reels and brand films cut for retention, with pacing, captions, and motion that hold attention to the last frame.",
     image: "/images/services/video-editing.webp",
@@ -52,6 +78,7 @@ const CARDS: ServiceCard[] = [
   {
     name: "AI Ads",
     slug: "ai-ads",
+    group: "Create",
     blurb:
       "AI-generated ad creative and UGC: more variations, produced faster, at a fraction of the usual cost.",
     image: "/images/services/ai-ads.webp",
@@ -59,16 +86,10 @@ const CARDS: ServiceCard[] = [
   {
     name: "Web & Software Development",
     slug: "ai-development",
+    group: "Build",
     blurb:
       "Custom websites, CMS, ERP and CRM systems, and complete business management software, built faster with AI-assisted development.",
     image: "/images/services/ai-development.webp",
-  },
-  {
-    name: "SEO",
-    slug: "seo",
-    blurb:
-      "Technical fixes, local SEO, and pages built around real searches, so customers find you on Google.",
-    image: "/images/services/seo.webp",
   },
 ];
 
@@ -265,9 +286,9 @@ export function MyServices() {
             the same gutter as every other section and never reach the viewport
             edge. */}
         <div className="shell shell-wide shrink-0 text-center">
-          <p className="eyebrow justify-center">My Services</p>
+          <p className="eyebrow justify-center">My Services · Seven ways I grow your business</p>
           <h2 className="display-lg mt-6 lg:whitespace-nowrap [@media(max-height:860px)]:mt-4 [@media(max-height:860px)]:text-[2.4rem]">
-            Seven ways I grow your business.
+            Grow. Create. <span className="text-emerald">Build.</span>
           </h2>
         </div>
 
@@ -364,6 +385,19 @@ export function MyServices() {
                       </div>
                     )}
 
+                    {/* Group chip: tells the visitor which part of the system this
+                        service belongs to. Absolute, so it adds no height to the
+                        pinned stage. */}
+                    <span
+                      className={cn(
+                        "absolute left-5 top-5 z-10 rounded-full px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.2em] backdrop-blur md:left-6 md:top-6",
+                        card.image
+                          ? "bg-black/35 text-white ring-1 ring-white/25"
+                          : "bg-emerald-tint text-emerald",
+                      )}
+                    >
+                      {card.group}
+                    </span>
                     <div className="relative flex h-full flex-col justify-end p-6 md:p-8">
                       <div>
                         {/* hyphens/break-words: "AI Development" overflowed a

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import localFont from "next/font/local";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
@@ -14,11 +14,15 @@ import {
 import { SiteChrome } from "@/components/shared/site-chrome";
 import { WhatsAppFloat } from "@/components/shared/whatsapp-float";
 
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
+// Self-hosted rather than next/font/google: the Google loader fetches the
+// font during the build, and on Cloudflare's builders that fetch broke the
+// whole build. The file is the variable latin subset Google serves (one file
+// covers every weight), so the rendered font is unchanged.
+const bricolage = localFont({
+  src: "./fonts/bricolage-grotesque-latin.woff2",
   variable: "--font-bricolage",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: "400 700",
 });
 
 export const metadata: Metadata = {

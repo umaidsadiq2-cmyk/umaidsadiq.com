@@ -21,11 +21,11 @@ export type MeetingOpenDetail = { service?: string };
 export const MEETING_SERVICES = [
   "Social Media Marketing",
   "Meta Ads",
+  "SEO",
   "Graphic Design",
   "Video Editing",
   "AI Ads",
   "Web & Software Development",
-  "SEO",
 ] as const;
 
 export const ENGAGEMENTS = [

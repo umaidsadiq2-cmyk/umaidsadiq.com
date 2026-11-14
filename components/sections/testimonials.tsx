@@ -185,11 +185,11 @@ export function Testimonials() {
         </div>
 
         {/* Client chips: navigation + a progress bar on the active one. */}
-        <div className="mt-14 flex items-center gap-3 border-t border-white/10 pt-8">
+        <div className="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:gap-4">
           <div
             role="group"
             aria-label="Choose a review"
-            className="-mx-1 flex flex-1 gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="-mx-1 flex min-w-0 flex-1 gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {testimonials.map((t, i) => {
               const on = i === active;
@@ -224,22 +224,51 @@ export function Testimonials() {
             })}
           </div>
 
-          <div className="hidden shrink-0 gap-2 sm:flex">
+          {/* Previous / next, with a counter. First on mobile so the controls
+              are never pushed off screen by the chip row. */}
+          <div className="order-first flex shrink-0 items-center gap-4 sm:order-none">
             <button
               type="button"
               aria-label="Previous review"
               onClick={() => go(active - 1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:border-[#6ee7b7] hover:text-[#6ee7b7]"
+              className="group flex h-14 w-14 items-center justify-center rounded-full border border-white/25 text-white transition-[border-color,background-color,color,transform] duration-300 hover:border-[#6ee7b7] hover:bg-[#6ee7b7] hover:text-ink active:scale-95"
             >
-              ←
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-0.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 12H5M11 6l-6 6 6 6" />
+              </svg>
             </button>
+            <p className="min-w-[4.5rem] text-center font-mono text-sm tabular-nums tracking-[0.15em] text-white/60" aria-live="polite">
+              <span className="text-white">{String(active + 1).padStart(2, "0")}</span>
+              {" / "}
+              {String(total).padStart(2, "0")}
+            </p>
             <button
               type="button"
               aria-label="Next review"
               onClick={() => go(active + 1)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:border-[#6ee7b7] hover:text-[#6ee7b7]"
+              className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#6ee7b7] text-ink transition-[background-color,transform] duration-300 hover:bg-white active:scale-95"
             >
-              →
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
             </button>
           </div>
         </div>

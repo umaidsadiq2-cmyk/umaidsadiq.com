@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { CinemaHero } from "@/components/sections/cinema-hero";
 import { MyServices } from "@/components/sections/my-services";
 import { Testimonials } from "@/components/sections/testimonials";
+import { CaseStudies } from "@/components/sections/case-studies";
+import { Packages } from "@/components/sections/packages";
 import { PortfolioPreview } from "@/components/sections/portfolio-preview";
 import { FinalCta } from "@/components/sections/final-cta";
 import { buildMetadata } from "@/lib/seo";
@@ -39,7 +41,9 @@ export const metadata: Metadata = {
  * 3    MyServices      the seven offerings as a scroll-driven horizontal carousel
  * 4    Testimonials    real client reviews, linked to the Facebook source
  * 5    PortfolioPreview  "Selected work" (unchanged) — the nav's "Work" target
- * 6    FinalCta        "Let's work together" (unchanged)
+ * 6    CaseStudies     draft-gated: hidden on the live site until real numbers
+ * 7    Packages        draft-gated: hidden on the live site until real prices
+ * 8    FinalCta        "Let's work together" (unchanged)
  */
 export default function HomePage() {
   return (
@@ -48,6 +52,8 @@ export default function HomePage() {
       <MyServices />
       <Testimonials />
       <PortfolioPreview />
+      <CaseStudies />
+      <Packages />
       <FinalCta />
     </>
   );

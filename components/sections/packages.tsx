@@ -46,12 +46,16 @@ export function Packages() {
                     : "border-line bg-white",
                 )}
               >
-                {p.featured && (
-                  <span className="absolute -top-3 left-7 rounded-full bg-emerald px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-white">
-                    Most popular
-                  </span>
-                )}
-                <h3 className="font-display text-2xl font-semibold tracking-tight">{p.name}</h3>
+                {/* The badge sits in the title row, inside the card: placed
+                    above the card's edge it was clipped by the reveal wrapper. */}
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="font-display text-2xl font-semibold tracking-tight">{p.name}</h3>
+                  {p.featured && (
+                    <span className="rounded-full bg-emerald px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.15em] text-white">
+                      Most popular
+                    </span>
+                  )}
+                </div>
                 <p className={cn("mt-2 text-sm", p.featured ? "text-white/70" : "text-muted")}>
                   {p.forWho}
                 </p>

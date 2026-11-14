@@ -79,4 +79,25 @@ export const services: Capability[] = z.array(capabilitySchema).parse([
     order: 4,
     relatedPortfolio: [],
   },
+  {
+    slug: "ai-development",
+    name: "Web & Software Development",
+    shortName: "Web & Software",
+    outcome: "Replace scattered tools with one system built for how you work.",
+    description:
+      "Custom websites, CMS platforms, and ERP and CRM software, built faster with AI-assisted development and shaped around your actual workflow.",
+    focus: ["Business websites", "CMS", "ERP systems", "CRM systems"],
+    order: 5,
+    relatedPortfolio: [],
+  },
+  {
+    slug: "seo",
+    name: "SEO",
+    outcome: "Get found by customers already searching for you.",
+    description:
+      "Technical SEO, on page optimisation, local SEO, and content planned around what your customers actually type into Google.",
+    focus: ["SEO audit", "Technical SEO", "Local SEO", "Keyword research"],
+    order: 6,
+    relatedPortfolio: [],
+  },
 ]);

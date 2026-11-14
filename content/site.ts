@@ -9,9 +9,9 @@ import { z } from "zod";
 export const siteMeta = {
   name: "Muhammad Umaid Sadiq",
   shortName: "Umaid Sadiq",
-  role: "Digital Marketing Expert",
+  role: "Digital Growth Partner",
   description:
-    "Muhammad Umaid Sadiq is a social media marketing expert helping businesses across Pakistan, the UAE, UK, Canada, and USA grow with social media marketing and management, content creation, graphic design, video editing, and animation.",
+    "Muhammad Umaid Sadiq is a digital growth partner helping businesses across Pakistan, the UAE, UK, Canada, and USA grow online with social media marketing, Meta Ads, content and video, websites, software, and SEO.",
   url: canonicalSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
 } as const;
 

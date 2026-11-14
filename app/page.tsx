@@ -20,15 +20,15 @@ import { buildMetadata } from "@/lib/seo";
  */
 const base = buildMetadata({
   description:
-    "Muhammad Umaid Sadiq is a digital marketing expert offering social media marketing, Meta ads, graphic design, video editing, AI ads, and AI powered web development for businesses in Pakistan, UAE, Saudi Arabia, the UK, USA, and Canada.",
+    "Muhammad Umaid Sadiq is a digital growth partner offering social media marketing, Meta ads, graphic design, video editing, AI ads, web and software development, and SEO for businesses in Pakistan, UAE, Saudi Arabia, the UK, USA, and Canada.",
   path: "/",
 });
 
 export const metadata: Metadata = {
   ...base,
-  title: "Umaid Sadiq | Digital Marketing Expert, Social Media & Meta Ads",
-  openGraph: { ...base.openGraph, title: "Digital Marketing Expert | Umaid Sadiq" },
-  twitter: { ...base.twitter, title: "Digital Marketing Expert | Umaid Sadiq" },
+  title: "Umaid Sadiq | Digital Growth Partner: Social Media, Web & SEO",
+  openGraph: { ...base.openGraph, title: "Digital Growth Partner | Umaid Sadiq" },
+  twitter: { ...base.twitter, title: "Digital Growth Partner | Umaid Sadiq" },
 };
 
 /**

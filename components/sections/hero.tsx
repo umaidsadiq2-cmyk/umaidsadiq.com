@@ -21,13 +21,13 @@ export function Hero() {
     <section className="relative isolate overflow-hidden pt-28 md:pt-36">
       <VantaFog />
       <div className="shell shell-wide pb-16 md:pb-24">
-        <p className="eyebrow hero-fade">Digital Marketing Expert</p>
+        <p className="eyebrow hero-fade">Digital Growth Partner</p>
 
         <div className="mt-8 grid items-center gap-7 md:grid-cols-[1.05fr_0.95fr] md:gap-16">
           <div className="order-2 md:order-1">
             <h1 className="font-display font-semibold uppercase leading-[0.86] tracking-[-0.02em]">
               <span className="sr-only">
-                Muhammad Umaid Sadiq, Digital Marketing Expert
+                Muhammad Umaid Sadiq, Digital Growth Partner
               </span>
               <span className="hero-rise block text-[clamp(3.25rem,11vw,9rem)]">
                 Umaid

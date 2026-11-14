@@ -64,6 +64,18 @@ export default function ContactPage() {
                     {conversion.email}
                   </a>
                 </li>
+                {profile.socials.map((s) => (
+                  <li key={s.platform}>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft hover:text-emerald"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 

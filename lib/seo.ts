@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { services } from "@/content/services";
 import { servicePages } from "@/content/service-pages";
 import { siteMeta } from "@/content/site";
+import { profile } from "@/content/profile";
 import type { ServicePage } from "@/lib/schemas";
 
 type PageSeo = {
@@ -61,6 +62,8 @@ export function personJsonLd() {
     jobTitle: siteMeta.role,
     url: siteMeta.url,
     description: siteMeta.description,
+    // Ties the site to the same person's social profiles for search engines.
+    sameAs: profile.socials.map((s) => s.url),
     knowsAbout: [
       "Social Media Marketing",
       "Content Creation",

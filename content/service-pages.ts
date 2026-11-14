@@ -441,14 +441,14 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
   },
   {
     slug: "ai-development",
-    name: "AI Development",
+    name: "Web & Software Development",
     metaTitle: "AI Powered Web Development Services | Custom Business Software",
     metaDescription:
       "AI powered web development for businesses in Pakistan, the UAE, Saudi Arabia, the UK, and the USA. Custom websites, CMS platforms, ERP systems, and business software.",
     ogTitle: "AI Powered Development Of Custom Websites And Business Software",
     ogDescription:
       "Custom websites, content management systems, ERP platforms, and business management software, built faster through AI assisted development.",
-    eyebrow: "AI Development",
+    eyebrow: "Web & Software Development",
     h1: "AI Powered Development Of Websites And Business Software",
     intro: [
       "Many businesses are still running on spreadsheets, paper records, or software that was never actually built for how they operate. That gap usually shows up as wasted time, lost information, or a website that cannot do what the business actually needs it to do.",
@@ -472,6 +472,7 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
         { title: "Business management software", description: "Custom systems for managing appointments, staff, orders, or day to day operations, replacing manual processes and spreadsheets." },
         { title: "Clinic and healthcare software", description: "Systems for managing patient records, appointments, and clinic operations, built around how a clinic actually runs day to day." },
         { title: "ERP systems", description: "Resource planning software that connects inventory, sales, and operations into one system instead of several disconnected tools." },
+        { title: "CRM systems", description: "Customer relationship software that keeps every lead, client, and follow up in one place, so no inquiry slips through the cracks." },
       ],
     },
     process: {
@@ -523,6 +524,91 @@ export const servicePages: ServicePage[] = z.array(servicePageSchema).parse([
     },
     relatedSlugs: ["graphic-design", "social-media-marketing", "meta-ads"],
     order: 5,
+  },
+  {
+    slug: "seo",
+    name: "SEO",
+    metaTitle: "SEO Services | Rank Higher On Google And Get Found",
+    metaDescription:
+      "SEO services for businesses in Pakistan, the UAE, Saudi Arabia, the UK, and the USA. Technical SEO, on page optimisation, local SEO, and content that brings customers from Google.",
+    ogTitle: "SEO Services That Bring Customers From Google",
+    ogDescription:
+      "Technical SEO, on page optimisation, local SEO, and content planning that help a business show up when customers are already searching for it.",
+    eyebrow: "SEO",
+    h1: "SEO Services That Bring Customers From Google",
+    intro: [
+      "Social media reaches people who were not looking for you. Search reaches the people who already are, typing exactly what you sell into Google and choosing whoever shows up first.",
+      "I help businesses show up for those searches, with technical fixes, on page optimisation, local SEO, and content planned around what your customers actually type.",
+    ],
+    heroImage: "/images/services/seo.webp",
+    heroImageAlt: "Abstract rising search ranking graph representing SEO growth",
+    overview: {
+      heading: "What SEO Actually Does For Your Business",
+      paragraphs: [
+        "SEO is not about tricking Google. It is about making sure your website is fast, clear, and genuinely useful for the searches your customers make, so Google is confident sending them to you.",
+        "For most businesses the biggest wins come from a few places: fixing technical problems that hold the site back, writing pages that match real search intent, and making sure local customers can find you on Google Search and Maps.",
+        "Because I also build websites and run social media, SEO is planned as part of the same system. Your site, your content, and your search presence all point in the same direction instead of being handled by three different people.",
+      ],
+    },
+    offerings: {
+      heading: "What My SEO Service Includes",
+      items: [
+        { title: "SEO audit", description: "A clear review of what is holding your website back in search, from technical errors to missing pages, with the fixes ranked by impact." },
+        { title: "Technical SEO", description: "Site speed, mobile experience, indexing, sitemaps, and structured data, so Google can crawl and understand every important page." },
+        { title: "On page optimisation", description: "Titles, descriptions, headings, and page content aligned with the keywords your customers actually search for." },
+        { title: "Local SEO", description: "Google Business Profile setup and optimisation, so nearby customers find you on Google Maps and local search results." },
+        { title: "Keyword research and content planning", description: "A plan of the pages and articles worth creating, based on real search demand rather than guesswork." },
+      ],
+    },
+    process: {
+      heading: "How I Approach SEO",
+      steps: [
+        { title: "Audit the current site", description: "A full look at your website, its rankings, and the technical issues that may be limiting its visibility." },
+        { title: "Research what customers search", description: "Keyword research focused on searches that lead to inquiries and sales, not just traffic." },
+        { title: "Fix the foundations", description: "Technical and on page issues are fixed first, since content cannot rank on a site Google struggles to read." },
+        { title: "Build content and local presence", description: "New pages, improved existing pages, and an optimised Google Business Profile that target the right searches." },
+        { title: "Measure and refine", description: "Rankings, traffic, and inquiries are tracked in Google Search Console, and the plan is adjusted based on what is working." },
+      ],
+    },
+    benefits: {
+      heading: "Benefits Of SEO For Your Business",
+      items: [
+        "Customers who find you while they are actively searching for what you sell",
+        "Traffic that keeps arriving without paying for every click",
+        "More visibility on Google Maps for local customers",
+        "A faster, clearer website that also converts better",
+        "Credibility that comes from ranking near the top of search results",
+        "Long term growth that compounds instead of stopping when ad spend stops",
+      ],
+    },
+    industries: {
+      heading: "Businesses That Benefit Most From SEO",
+      items: ["Clinics and healthcare providers", "Real estate agencies", "Restaurants and cafes", "Ecommerce and online stores", "Educational institutions", "Professional service firms", "Home services and contractors", "Local retail businesses"],
+    },
+    locations: {
+      heading: "SEO Services Across Multiple Regions",
+      items: [
+        { region: "Pakistan", blurb: "For businesses across Pakistan, local SEO and a well optimised Google Business Profile are often the fastest ways to win customers searching nearby." },
+        { region: "UAE", blurb: "In Dubai and across the UAE, search results are competitive, so technical quality and well targeted pages make a real difference to visibility." },
+        { region: "Saudi Arabia", blurb: "For businesses in Riyadh and other Saudi cities, SEO is planned with local search behaviour and bilingual audiences in mind." },
+        { region: "United Kingdom", blurb: "UK businesses often compete with established sites, so SEO focuses on specific, high intent searches where a smaller business can realistically rank." },
+        { region: "United States", blurb: "Across the USA, SEO targets the local and niche searches that bring qualified customers rather than chasing broad, crowded keywords." },
+        { region: "Canada", blurb: "For Canadian businesses, SEO combines local visibility with clear, well structured pages that serve customers across different cities." },
+      ],
+    },
+    faqs: [
+      { question: "How long does SEO take to show results?", answer: "Technical fixes and local SEO can show improvements within weeks, while ranking for competitive searches usually takes a few months of consistent work. SEO builds over time rather than switching on overnight." },
+      { question: "Can you guarantee a first position on Google?", answer: "No honest SEO provider can guarantee a specific ranking, because Google decides the results. What I can do is fix the issues holding your site back and target the searches most likely to bring you customers." },
+      { question: "Do I need a new website for SEO?", answer: "Not always. Many sites can be improved as they are. If your current site has serious technical limits, I can rebuild it through my web development service with SEO built in from the start." },
+      { question: "What is local SEO?", answer: "Local SEO helps your business appear when people nearby search for what you offer, especially on Google Maps. It relies heavily on an optimised Google Business Profile and consistent business details online." },
+      { question: "How is SEO different from Meta Ads?", answer: "Meta Ads put your business in front of people on Facebook and Instagram and stop when the budget stops. SEO brings people who are already searching on Google and keeps working over time. Many businesses use both together." },
+    ],
+    cta: {
+      heading: "Get Found By Customers Already Searching For You",
+      text: "Create a meeting and I will look at how your website currently performs in search, and what it would take to bring you more customers from Google.",
+    },
+    relatedSlugs: ["ai-development", "social-media-marketing", "meta-ads"],
+    order: 6,
   },
 ]);
 

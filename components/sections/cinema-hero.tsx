@@ -12,7 +12,8 @@ const DISCIPLINES = [
   "Graphic Design",
   "Video Editing",
   "AI Ads",
-  "AI Development",
+  "Web & Software Development",
+  "SEO",
 ];
 
 /**
@@ -342,7 +343,7 @@ export function CinemaHero() {
               style={{ "--hero-delay": "0.26s" } as React.CSSProperties}
               className="mt-6 block max-w-5xl font-display text-[clamp(2.75rem,8.5vw,7rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-white"
             >
-              Digital Marketing Expert
+              Digital Growth Partner
             </span>
           </h1>
           <p
@@ -350,7 +351,7 @@ export function CinemaHero() {
             style={{ "--hero-delay": "0.37s" } as React.CSSProperties}
             className="mt-7 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
           >
-            5+ Years of Experience in Digital Growth
+            Social media, Meta Ads, websites and SEO, all under one roof. 5+ years of growing brands online.
           </p>
         </div>
 

@@ -55,8 +55,16 @@ export const profile: Profile = profileSchema.parse({
     },
   },
   socials: [
-    { platform: "LinkedIn", url: "https://www.linkedin.com/", label: "LinkedIn" },
-    { platform: "Instagram", url: "https://www.instagram.com/", label: "Instagram" },
+    {
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/in/umaid-sadiq-digital-marketing",
+      label: "LinkedIn",
+    },
+    {
+      platform: "Instagram",
+      url: "https://www.instagram.com/umaiddigital1",
+      label: "Instagram",
+    },
   ],
   location: "Working with businesses across Pakistan, USA, UK, Canada & UAE",
 });

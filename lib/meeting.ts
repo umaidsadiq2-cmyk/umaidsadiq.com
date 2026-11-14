@@ -24,7 +24,8 @@ export const MEETING_SERVICES = [
   "Graphic Design",
   "Video Editing",
   "AI Ads",
-  "AI Development",
+  "Web & Software Development",
+  "SEO",
 ] as const;
 
 export const ENGAGEMENTS = [

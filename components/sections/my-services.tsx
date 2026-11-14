@@ -19,7 +19,7 @@ type ServiceCard = {
   image?: string;
 };
 
-/** The six offerings, in presentation order. */
+/** The seven offerings, in presentation order. */
 const CARDS: ServiceCard[] = [
   {
     name: "Social Media Marketing",
@@ -57,11 +57,18 @@ const CARDS: ServiceCard[] = [
     image: "/images/services/ai-ads.webp",
   },
   {
-    name: "AI Development",
+    name: "Web & Software Development",
     slug: "ai-development",
     blurb:
-      "AI-assisted development of custom websites, CMS, ERP systems, dynamic websites, and complete business management software.",
+      "Custom websites, CMS, ERP and CRM systems, and complete business management software, built faster with AI-assisted development.",
     image: "/images/services/ai-development.webp",
+  },
+  {
+    name: "SEO",
+    slug: "seo",
+    blurb:
+      "Technical fixes, local SEO, and pages built around real searches, so customers find you on Google.",
+    image: "/images/services/seo.webp",
   },
 ];
 
@@ -260,7 +267,7 @@ export function MyServices() {
         <div className="shell shell-wide shrink-0 text-center">
           <p className="eyebrow justify-center">My Services</p>
           <h2 className="display-lg mt-6 lg:whitespace-nowrap [@media(max-height:860px)]:mt-4 [@media(max-height:860px)]:text-[2.4rem]">
-            Six ways I grow your business.
+            Seven ways I grow your business.
           </h2>
         </div>
 

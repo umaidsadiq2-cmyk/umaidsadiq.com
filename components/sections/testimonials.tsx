@@ -121,12 +121,6 @@ export function Testimonials() {
           </div>
 
           <div className="flex items-center gap-5">
-            <p className="text-sm text-white/60">
-              <span className="font-display text-3xl font-semibold text-white">
-                {String(total).padStart(2, "0")}
-              </span>{" "}
-              businesses recommend
-            </p>
             <a
               href={reviewsUrl}
               target="_blank"
